@@ -1,5 +1,9 @@
-package Emp_Wage_Problem;
+package com.employeewageproblem;
 
+/*
+ program to calculate daily wage of an employee
+  till maximum hrs 100hrs or maximum 20 days is reached 
+ */
 public class EmployeeWageComputation {
 
 	public static void main(String[] args) {
