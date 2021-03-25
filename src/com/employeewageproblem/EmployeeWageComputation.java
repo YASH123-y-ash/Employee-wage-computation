@@ -1,7 +1,10 @@
-package Emp_Wage_Problem;
+package com.employeewageproblem;
 
+/*
+ program to check employee attendance
+ if employee is present or absent
+ */
 public class EmployeeWageComputation {
-
 	public static void main(String[] args) {
 		final int FULL_TIME = 1;
 		int empType = (int) (Math.random() * 100) % 2;
@@ -15,5 +18,4 @@ public class EmployeeWageComputation {
 
 		}		
 	}
-
 }
