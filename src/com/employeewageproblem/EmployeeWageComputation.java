@@ -2,12 +2,12 @@ package com.employeewageproblem;
 
 /*
  calculating total wage of an employee till 
- maximum working days20 days or max hrs 100hrs is reached
+ maximum working days 20days or max hrs 100hrs is reached
  using class method.
  */
 public class EmployeeWageComputation {
 
-	// instance variables
+	// global static variables
 	public static final int IS_PART_TIME = 1;
 	public static final int IS_FULL_TIME = 2;
 	public static final int EMP_RATE_PER_HR = 20;
