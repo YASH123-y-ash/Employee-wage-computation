@@ -1,5 +1,9 @@
-package Emp_Wage_Problem;
+package com.employeewageproblem;
 
+/*
+ program to calculate wage
+ according to full-time or part-time of employee
+ */
 public class EmployeeWageComputation {
 
 	public static void main(String[] args) {
