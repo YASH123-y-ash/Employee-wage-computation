@@ -1,4 +1,4 @@
-package Emp_Wage_Problem;
+package com.employeewageproblem;
 
 public class EmployeeWageComputation {
 
