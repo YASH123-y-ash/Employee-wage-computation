@@ -1,26 +1,27 @@
 package com.employeewageproblem;
 
 /*
- calculating total wage of an employee till 
- maximum working days 20days or max hrs 100hrs is reached
- using class method.
+@description: program to calculate total wage of 
+an employee for different companies
+
+@method: defining a method to which takes argument for a company
+attributes such as company name,empRatePerHour,numOfWorkingDays
+and maxHourPerMonth
  */
+
 public class EmployeeWageComputation {
 
 	// global static variables
 	public static final int IS_PART_TIME = 1;
 	public static final int IS_FULL_TIME = 2;
-	public static final int EMP_RATE_PER_HR = 20;
-	public static final int NUM_WORKING_DAY = 20;
-	public static final int MAX_HRS_IN_MONTH = 100;
 
 	//method to get employee wage till max hrs or max working hrs reached
-	public static int computingEmpWage()
+	public static int computingEmpWage(String company, int empRatePerHour,
+			int numOfWorkingDays, int maxHoursPerMonth)
 	{
-		//local variables
 		int empHrs = 0, totalEmpHrs = 0, totalWorkingDay = 0;
 
-		while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDay < NUM_WORKING_DAY)
+		while (totalEmpHrs <= maxHoursPerMonth && totalWorkingDay < numOfWorkingDays)
 		{
 			totalWorkingDay++;
 			int empCheck = (int) Math.floor(Math.random() * 10) % 3;
@@ -42,8 +43,8 @@ public class EmployeeWageComputation {
 		}
 
 		// total salary of employee
-		int totalEmpWage = totalEmpHrs * EMP_RATE_PER_HR;
-		System.out.println("Total Emp Wage: " + totalEmpWage);
+		int totalEmpWage = totalEmpHrs * empRatePerHour;
+		System.out.println("Total Emp Wage for company: " +company+ " is:" + totalEmpWage);
 		return totalEmpWage;
 	}
 
@@ -51,7 +52,8 @@ public class EmployeeWageComputation {
 	{
 
 		//calling method
-		computingEmpWage();
+		computingEmpWage("DMart", 20, 2, 10);
+		computingEmpWage("Reliance", 10, 4, 20);
 
 	}
 }
