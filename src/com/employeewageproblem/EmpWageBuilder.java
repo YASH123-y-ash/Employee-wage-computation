@@ -1,8 +1,8 @@
 package com.employeewageproblem;
 
 /*
-@description: this class is calculate wage for multiple
-companies by implementing interface and using LinkedList.
+@description: this class is calculating daily wage for multiple
+companies along with total wage by implementing interface and using LinkedList.
 
 @parameters:addCompanyWage() to add company to an linkedList.
 computeEmpWage() method to calculate emp wage for company.
@@ -16,12 +16,12 @@ public class EmpWageBuilder implements IComputeEmpWage {
 
 	public static final int IS_PART_TIME = 1;
 	public static final int IS_FULL_TIME = 2;
-	private static EmpWageBuilder IComputeEmpWageBuilder;
 
 	private int numOfCompany = 0;
 	private LinkedList<EmployeeWageComputation> companyEmpWageList;
 	private Map<String,EmployeeWageComputation> companyToEmpWageMap;
 
+	//creating object through constructor
 	public EmpWageBuilder() 
 	{
 		companyEmpWageList = new LinkedList<>();
@@ -62,6 +62,8 @@ public class EmpWageBuilder implements IComputeEmpWage {
 		//computation
 		while(totalEmpHrs <= companyEmpWage.maxHoursPerMonth && totalWorkingDays  < companyEmpWage.numOfWorkinDays)
 		{
+			int dailyWage = 0;
+
 			totalWorkingDays++;
 			int empCheck = (int) Math.floor(Math.random() * 10) % 3;
 			switch(empCheck)
@@ -76,9 +78,10 @@ public class EmpWageBuilder implements IComputeEmpWage {
 				empHrs = 0;
 			}
 			totalEmpHrs += empHrs;
-			System.out.println("Days: " + totalWorkingDays + " Emp Hrs " + empHrs);
+			dailyWage = companyEmpWage.empRatePerHour*empHrs;  
+			System.out.println(" day " + totalWorkingDays + " wage is " + dailyWage);
 		}
-		return totalEmpHrs = companyEmpWage.empRatePerHour;
+		return totalEmpHrs*companyEmpWage.empRatePerHour;
 	}
 	public static void main(String[] args) {
 		IComputeEmpWage empWageBuilder = new EmpWageBuilder();
