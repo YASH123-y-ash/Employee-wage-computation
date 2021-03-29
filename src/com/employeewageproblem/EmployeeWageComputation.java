@@ -10,7 +10,6 @@ total wage for each company
 
 public class EmployeeWageComputation {
 
-
 	public final String company;
 	public final int empRatePerHour;
 	public final int numOfWorkinDays;
