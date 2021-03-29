@@ -22,19 +22,22 @@ public class EmpWageBuilder implements IComputeEmpWage {
 	private LinkedList<EmployeeWageComputation> companyEmpWageList;
 	private Map<String,EmployeeWageComputation> companyToEmpWageMap;
 
-	public EmpWageBuilder() {
+	public EmpWageBuilder() 
+	{
 		companyEmpWageList = new LinkedList<>();
 		companyToEmpWageMap = new HashMap<>();
 	}
 
+	//to add company employee wage to list
 	@Override
-	public void addCompanyEmpWage(String company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth) {
+	public void addCompanyEmpWage(String company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
+	{
 		// TODO Auto-generated method stub
 		EmployeeWageComputation companyWage = new EmployeeWageComputation(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth);
 		companyEmpWageList.add(companyWage);
 		companyToEmpWageMap.put(company, companyWage);
 	}
-
+	// to get employee wage for a company
 	@Override
 	public void computeEmpWage() {
 		// TODO Auto-generated method stub
