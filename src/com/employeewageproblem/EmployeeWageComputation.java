@@ -1,11 +1,12 @@
 package com.employeewageproblem;
 
 /*
-@description: program to calculate total wage of 
-an employee for different companies
+@description: class to take private instance variables
+and used get and set method to access it.
 
-@method: defining a method computeEmpWage() to calculating 
-total wage for each company
+@method: defining a parameterized constructor to initialize
+instance variable.
+Override toString method return company total employee wage.
  */
 
 public class EmployeeWageComputation {
